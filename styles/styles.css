@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --heading-background-color: hwb(219 2% 70%);
     --heading-text-color: hsl(0, 0%, 37%);
@@ -5,50 +11,81 @@
     --padding: 1rem;
     --border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+body {
+    font-size: 16px;
+}
+
 nav {
     background-color: rgb(0, 0, 0);
     padding: 10px;
 }
+
 nav a {
     color: white;
     display: block;
     padding: 20px;
 }
+
 h1 {
     background-color: var(--heading-background-color);
     color: var(--heading-text-color);
     font-family: var(--heading-font);
     padding: var(--padding);
 }
+
 main img {
     width: 150px;
     height: auto;
-    border: var(border);
+    border: rgba(0, 0, 0, 0.1)  ;
     padding: 2px;
-    box-shadow: 0 0 25px var(--heading-background-color);
+    box-shadow: 0 0 10px var(--heading-background-color);
+    float: right;
+    margin: 10px;
 }
+
 p {
-    padding: 0;
+    padding: 1rem;
+    margin: 1rem;
 }
+
 main {
     max-width: 840px;
 }
+
 aside {
     width: 20rem;
-    margin: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    padding: var(--padding);
-    background-color: #eee;
-    color:#000000;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
+
 aside img {
     width: 200px;
     height: auto;
 }
+
+aside h2 {
+    position: absolute;
+    top: 47px;
+    left: 120px;
+}
+
 footer {
     margin-top: 15px;
     border-top: 1px solid #000000;
     text-align: center;
+}
+
+/* Class Selectors */
+
+.box {
+    margin: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    background-color: hwb(0 76% 24%);
+    color: #000;
+}
+
+.indent {
+    padding-left: 2rem;
 }
