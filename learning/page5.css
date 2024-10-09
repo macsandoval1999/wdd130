@@ -1,0 +1,85 @@
+#box1 {
+    border: 1px solid;
+    height: 300px;
+    width: 300px;
+    background-color: skyblue;
+    position: static;
+    /* any element that is positioned statically is in its normal state. It is the default when no position is set.*/
+}
+
+
+
+#box2 {
+    border: 1px solid;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    position: relative;
+    /* any element that is positioned relative is moved to the point of origin which is the top left corner. There are offsets: top bottom left and right */
+}
+#box3 {
+    border: 1px solid;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    position: relative;
+    top: 500px;
+    left: 150px;
+    /* this is a relative example with offsets. the offsets go off of the point of origin. Notice how the element hovers over text, we must be careful how we write code and how we group and style things to avoid this. */
+}
+
+#box4 {
+    border: 1px solid;
+    height: 100px;
+    width: 100px;
+    background-color: rgb(68, 255, 0);
+    position: absolute;
+    left: 300px
+    /* any element that is positioned with absolute will be taken out of the flow of the document. we can use top bottom left right to place the element anywhere on our viewport. this is only true if the element does not have a parent element. if it does, the offsets will go off of the parent element instead. */
+}
+
+
+
+
+#box5 {
+    border: 1px solid;
+    height: 300px;
+    width: 300px;
+    background-color: rgb(167, 151, 11);
+    position: relative;
+    top: 10px;
+    left: 50%;
+}
+#box6 {
+    border: 1px solid;
+    height: 100px;
+    width: 100px;
+    background-color: rgb(144, 0, 255);
+    position: absolute;
+    top: 150px;
+    left: 100px;
+}
+/* }This is an example of an absolute element with a parent element. box 5 is the parent, and box 6 is the child. when an element has a parent, the child element will follow wherever the parent element goes as its position is locked onto the parent element */
+
+#box7 {
+    border: 1px solid;
+    height: 300px;
+    width: 300px;
+    background-color: rgb(251, 144, 144);
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    /* fixed will stay in position of your viewport */
+}
+#box8 {
+    border: 1px solid;
+    height: 300px;
+    width: 300px;
+    background-color: rgb(251, 144, 144);
+    position: sticky;
+    top: 0px;
+    bottom: 0px;
+    /* sticky will get the element to stick to your viewport depending on what properties you give it. In our example we gave it a top and bottom property, so each time we scroll past the element on the screen, it will stick to the top or bottom and snap back into place when we scroll back to its origin. */
+}
+
+/* position allows us to */

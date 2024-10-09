@@ -1,0 +1,103 @@
+:root {
+    --primary-color: #1f363d;
+    --secondary-color: #40798c;
+    --accent1-color: #9ec1a3;
+    --accent2-color: #cfe0c3; 
+    --heading-font: "Roboto", Helvetica, sans-serif;
+    --text-font: "Open-sans", Helvetica, sans-serif;
+}
+
+body {
+    width: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+}
+
+nav {
+    font-family: var(--text-font);
+}
+
+
+
+
+
+/* STILL NEEDS WORK */
+.hero {
+    position: relative;
+    width: 100%;
+    height:auto;
+    display: block;
+    font-family: var(--heading-font);
+    color: var(--accent1-color);
+}
+.hero h1 {
+    position: absolute;
+    top: 2rem;
+    left: 0px;
+    background-color: var(--primary-color);
+    height:3rem;
+    width: 750px;
+    text-align: center;
+    display: inline-block;
+}
+.hero img {
+    position: "static";
+    width: 100%;
+}
+
+article {
+    position: absolute;
+    height:10rem;
+    width: 500px;
+    font-family: var(--text-font); 
+    background-color: var(--secondary-color);
+    top: 125px;
+    left: 125px;
+    font-size: small;
+}
+
+article::before {
+    content:'';
+    background-color:'';
+    opacity: 0.5;
+}
+
+.heromid img {
+    float: right;
+    height: 10rem;
+    width:auto;
+}
+/* STILL NEEDS WORK */
+
+
+
+
+
+p {
+    font-family: var(--text-font);
+}
+
+h2 {
+    display: block;
+    position: relative;
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
+}
+
+.raftimg {
+    position: relative;
+    display: block;
+    padding-top: 0px;
+}
+
+.p2 {
+    font-size: smaller;
+    font-family: var(--text-font);
+    padding: 0px;
+    margin: 0px;
+}
+
+footer {
+    font-family: var(--text-font);
+}

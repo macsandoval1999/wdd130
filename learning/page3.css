@@ -1,0 +1,74 @@
+body {
+    background-color: black;
+}
+
+
+h1 {
+    color: white;
+    font-family: "press start 2p", "consolas", sans-serif;
+    /* This is and example of a font that was linked by url as shown in the <head> of the html document */
+}
+
+
+p {
+    background-color: rgb(84, 84, 84); color: white;
+    font-family: "consolas", sans-serif;
+    /* font-family changes the font. You can list one font between "", but it is recommended to list at least three fonts. each font after the main quoted one is a contingency font the browser can use if the prioritized font isnt supported by the browser. They are listed from left to right with the left one being the priority. */
+}
+
+
+#p1 {
+    background-color: black;
+    color: rgb(17, 165, 12);
+    font-style: italic;
+    /* Allows italic or oblique faces to be selected. Italic forms are generally cursive in nature while oblique faces are typically sloped versions of the regular face. */
+    font-weight: bold;
+    /* font-weight specifies weight of glyphs in the font, their degree of blackness or stroke thickness.*/
+    text-decoration: green dotted underline;
+    /* text-decoration is an underline */
+    font-size: large;
+    /* font-size indicates the desired height of glyphs from the font. For scalable fonts, the font-size is a scale factor applied to the EM unit of the font. (Note that certain glyphs may bleed outside their EM box.) For non-scalable fonts, the font-size is converted into absolute units and matched against the declared font-size of the font, using the same absolute coordinate space for both of the matched values. */
+}
+/* id starts with # on a spreadshet */
+
+
+.odd { background-color: blue;
+    color: black;
+}
+.even { background-color: white; color: blue;
+}
+/* class starts with a dot .  */
+
+
+.para2 {
+    border-style: outset;
+    /* border-style lets you change the border style. there are many different styles such as dashed, dotted, solid, and double. to view all options just type in border-style: and look throught the options */
+    border-width: 5px;
+    /* border-width lets you change how thick the border is */
+    border-color: gold;
+    /* border-color lets you change the color of the border. */
+    border-radius: 10px;
+    /* borer-radius lets you change the roundness of the corners. The higher the numbner the smoother the rounding. */
+    padding: 5px;
+    /* padding gives you spacing between the content and the border */
+}
+/* This is a border example with a non custom border */
+
+
+#header1 {
+    border-top-style: dotted;
+    /* you can change any side of the border by specifying which side you want to change. Two more examples below. */
+    border-bottom-style: solid;
+    border-left-style: double;
+    border-left-width: 10px;
+    /* you can change the width of any side of the border by specifying which side you want to change */
+    border-left-color: rgb(245, 0, 0);
+    /* you can change the color of any side of the border by specifying which side of the border you want to change */
+    border-top-left-radius: 50px;
+    /* this is an example of the different options you can do based on the basic options above */
+    padding: 1rem;
+}
+/* This is a border with custom borders */
+
+
+/* FOR MORE CSS GO TO PAGE 4 */

@@ -1,0 +1,112 @@
+body {
+    background-image: url(images/wwrbg.webp);
+    /* you  can set an image as a background using background-image */
+    background-repeat: no-repeat;
+    /* works the same as with the linear gradient example below... read the note */
+    background-attachment: fixed;
+        /* works the same as with the linear gradient example below... read the note */
+    background-position: center;
+    /* background-position  can be used to position the backgroundd. in this case we centered it to the screen or web page */
+    background-size: cover;
+    /* background size with the cover value can be used to cover the entire web page so that it doesnt leave any white space */
+   
+    border: 10px dotted black;
+    margin: 0px;
+    /* placing a border to the body, we will see the space the html document actually takes up in a web page. if we don't set the margin, it only takes up the minimum work space needed. setting the margin to 0px will allow the html to take up the entire screen or available space */
+}
+
+
+p {
+    background: linear-gradient(rgb(200, 117,24), red);
+    /* this is a different type of background where background: linear-gradient lets you choose two colors that transition to each other in the background. simply doing this isnt good because the pattern repeats itself all the way down the web page. */
+    background-repeat: no-repeat;
+    /* background-repeat is a property that can prevent the repeat pattern by typing no-repeat. However, this only stops the repeat and doesnt extend the pattern all the way down.*/
+    background-attachment: fixed;
+    /* background-attachment with fixed value stretches the background all the way down. */
+}
+
+
+h1 {
+    background: linear-gradient(to right, rgb(255, 0, 0), rgb(98, 6, 6));
+    /* we can also change the direction of the linear-gradient by adding "to right" or "left" into it */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#box1 {
+    border: 5px solid;
+    border-style: dotted;
+    border-color: white;
+    width: 250px;
+    height: 250px;
+    font-size: 22px;
+    background-color: black;
+    color: green;
+    padding: 10px;
+    margin: 1rem;
+    /* margin alone adds margin all around the element */
+}
+
+#box2 {
+    border: 5px solid;
+    border-style: dotted;
+    border-color: white;
+    width: 250px;
+    height: 250px;
+    font-size: 22px;
+    background-color: rgb(0, 255, 119);
+    color: rgb(0, 0, 0);
+    padding: 2rem;
+    margin-top: 5rem;
+    margin-left: 50%;
+    /* using percentages means the margin here will be for example the left margin will be 50% of the left of the screen */
+    margin-bottom: auto;
+    /* you can change the margin for an individual side */
+}
+
+#box3 {
+    border: 25px solid;
+    border-style: solid;
+    border-color: rgb(188, 0, 0);
+    width: 250px;
+    height: 250px;
+    font-size: 22px;
+    background-color: rgb(18, 0, 105);
+    color: rgb(255, 255, 255);
+    padding: 5rem;
+    margin-right:auto;
+    /* using margin auto will automatically put the element here for example on the left side of the screen where available */
+    margin-left: auto;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    /* if both margin left and right are auto, the element will be centered to the screen */
+}
+
+
+
+
+
+img {
+    float: left;
+    /* float left or right on its own will push the images the the desired side and side by side as if you were reading the left to right or vice versa. If you have paragraphs, they will wrap around them allowing you to still see the text.*/
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+    font-size: 40px;
+    text-align:center;
+    background: white;
+    float: right;
+}
+
+.para3 {
+    clear: both;
+    /* To stop elements from wrapping around a floating element, use the clear property to stop your element from wrapping around either left right or both which moves the floating element above the next element */
+}
+
+/* DO NOT CONFUSE MARGIN WITH PADDING */
+/* Margin is the space around an element it is the empty space around elements. for example, to avoid having multiple pictures clustered, we give them margins to have spacing between pictures.*/
+/* padding is the space between  the content and the border*/
+/* float, positions an element to the left or right side of a container. It is popular for wrapping elements around images */

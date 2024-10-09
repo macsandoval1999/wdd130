@@ -1,0 +1,173 @@
+<!-- NOTE: LOOK AT END OF PAGE FOR GENERAL NOTES!!! -->
+
+
+
+<!DOCTYPE html>
+                <!--^html files must start with the above declaration in order to be compliant with basic html standards aka html5^-->
+<html>
+                <!--^ all the stuff for the page will be within the below html element. It is the root of an html doc. htmls have two main sections, the <head> and the <body>^ -->
+
+
+
+
+    <head>
+                <!-- the head contains information about the web page -->
+                      <!-- meta elements are applied within the head, and express other data that cannot be express using <title>, <base>, <link>, and <style>. <meta> tells the web browser what the web page is about.they are self closing and do not need a closing tag. <meta> tags have three different attributes as shown below, name, charset, and http-equiv.-->
+    <title>Learning HTML</title>
+                <!-- ^the title of the web page. it will show on the tab^ -->
+
+    <meta charset="UTF-8">
+                <!-- charset tells the web browser what kind of character encoding we are using. We are strongly encouraged to use UTF-8 so just use this-->
+    <meta name="description" content="Free HTML tutorial for beginners">
+                <!-- description is read by the web browser. the content here is a brief description of your web page-->
+    <meta name="keywords" content="HTML, tutorial, beginners">
+                <!-- keywords are for the search engine. or for search engine optimization. the content here is a list of keywords that describe your web page -->
+    <meta name="author" content="Marco Sandoval">
+                <!-- author is for  the web page to have a credited author. the content here is the author-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <!-- viewport and this exact content allow the web page to fit the browser devices screen whether its a mobile device, a laptop, or a tablet, etc.-->
+    <meta http-equiv="refresh" content="30">
+                <!-- the http-equiv attribute with "refresh" gives the page the ability to refresh automatically. the content is how many seconds it takes for the browser to refresh the page. -->
+    </head>
+
+
+
+
+<body style="background-color: #838383;">
+                <!-- the body is what you would like to display to a user. The body has an optional style attribute that we can use to change the color of the web page using "background-color:______;"-->
+    <h1 style="color: white; background-color: black;">h1 THIS IS THE TITLE OF THE WEB PAGE</h1>
+<hr>
+                <!--^ hr is horizontal rule, and it divides the webpage section by section with a horizontal line. ^-->
+   
+   
+   
+    <h2>h2 This is the main header</h2>
+        <a href="page2.html" target="_self" title="This takes you to page 2"> 
+            <p>Go to page 2</p>
+        </a>
+        <a href="page3.html" target="_self" title="This takes you to page 3">
+            <p>Go to page 3</p>
+        </a>
+        <a href="page4.html" target="_self" title="This takes you to page 4">
+            <p>Go to page 4</p>
+        </a>
+        <a href="page5.html" target="_self" title="This takes you to page 5">
+            <p>Go to page 5</p>
+        </a>
+        <a href="https://www.facebook.com" target="_blank" title="This takes you to facebook">
+            <p>Facebook</p>
+        </a>
+                <!-- ^ tags turn any text or image into a hyperlink. Within tags there is an href attribute that you can set to a URL of your choosing, this can be a web address, an html file as shown above, you can even do an email by typing mailto:______ blank being the email address after href=. There is also a target attribute that allows you to open the the link in a new window _blank, or open in the same window _self which is the default if no target is set. There is also a title attribute which is a text that shows in a small popup box when you hover over the hyperlink. -->
+
+
+
+
+    <h2>h2 This is the second header</h2>
+        <a href="https://www.facebook.com" target="_blank" title="This takes you to facebook">
+            <img src="images/fb-logo.webp" height="25px" alt="facebook logo" title="Facebook link">
+                <!-- image sizes can be changed as shown above -->
+        </a>
+                <!-- ^Above is a hyperlink <a> tag that uses an image as the hyperlink instead of text -->
+
+
+
+
+    <h2>h2 Notice that each header level gets smaller</h2>
+        <p>p THIS IS THE PARAGRAPH! Browsers automatically add a blank line before and after any paragraph elements.</p>
+            <br>
+                <!-- ^wherever you would like a line break, add a <br> element. It does not need a closing tag^ -->
+        <p>p If you type "lorem" and a number, ex lorem10, you will get some random words to make the space until you type whatever you really want. Lorem ipsum dolor sit amet.</p>
+        <h3>h3 Notice that each header level gets smaller</h3>
+        <h4>h4 Notice that each header level gets smaller</h4>
+        <hr>
+
+
+
+    <h2>h2 THIS IS TEXT FORMATTING</h2>
+        <p>This <b>is normal</b> text.</p>
+                <!-- any text that needs to be bold, simply surround with opening and closeing <b> tags -->
+        <p>This <i> is normal</i> text</p>
+                <!-- any text that needs to be italicized, surround with opening and closing <i> tags -->
+        <p>This <big>is normal</big> text</p>
+                <!-- <big> tags make the text a font bigger -->
+        <p>This <small>is normal</small> text</p>
+                <!-- <small> tags make the text a font smaller -->
+        <p>This <sub>is normal</sub> text</p>
+        <p>This <sup>is normal</sup> text</p>
+        <p>This <ins>is normal</ins> text</p>
+        <p>This <del>is normal</del> text</p>
+        <p>This <mark>is normal</mark> text</p>
+        <p><b>This</b> <del>is</del> <sub>normal</sub> <mark>text</mark></p>
+                <!-- For the above tags, open live server to see what they do to the text -->
+<hr>
+
+
+
+    <h2>h2 This is how you can make lists</h2>
+        <h3>h3 Unordered list, such as pizza recipe</h3>
+            <ul>
+                <li>Pizza</li>
+                <li>Tomato sauce</li>
+                <li>Dough</li>
+            </ul>
+                <!--^ To create an unordered list, use the <ul> tag. Between the <ul> tag, you can create individual list items using the <li> tags for each item we want in our list -->
+        <h3>h3 Ordered list, such as a to do list</h3>
+            <ol>
+                <li>eat breakfast</li>
+                <li>take shower</li>
+                <li>leave for work</li>
+            </ol>
+                <!-- ^ordered lists are similar to unorderd lists <ul> except they are numbered in the order you add them. ordered lists use <ol> tags -->
+            <ol type="A">
+                <li>eat breakfast</li>
+                <li>take shower</li>
+                <li>leave for work</li>
+            </ol>
+                <!-- ^You can change the type of ordering style by using a type="" attribute and selecting one of the options. to view the options, delete the quotes and type in the first quote, then will your options appear. -->
+        <h3>h3 Description list</h3>
+            <dt>HTML</dt>
+                <dd>This adds structure to a webpage</dd>
+            <dt>CSS</dt>
+                <dd>This adds style to a webpage</dd>
+            <dt>JavaScript</dt>
+                <dd>This adds functionality to a webpage</dd>
+                <!-- ^<dt> are term tags where you put what you want to describe. <dd> are definition tags where you write the definition of the <dt> or term. -->
+        <h3>Sublist example: Pizza Recipe</h3>
+            <ul>
+                <li>Dough</li>
+                    <ol type="1">
+                        <li>pour water</li>
+                        <li>whisk the batter</li>
+                        <li>drain</li>
+                    </ol>
+                <li>Sauce</li>
+                    <ol>
+                        <li>squirt the thing</li>
+                        <li>drain the thing</li>
+                        <li>pour the thing></li>
+                    </ol>
+            </ul>
+<hr>
+
+
+    <div style="background-color: black; color: white;">
+    <h2>Using Span and div tags</h2>
+            <p>Lorem ipsum dolor sit, amet <span style="background-color: white; color: blue;">adipisicing elit. Nihil explicabo, numquam</span> voluptates deserunt placeat mollitia? Quam, omnis. Aspernatur eius autem velit sint accusantium assumenda placeat, soluta itaque odio dolorem incidunt mollitia eveniet repellendus. Dicta suscipit officia fuga animi aliquam, ex necessitatibus fugiat commodi, consequatur consequuntur laudantium amet! Excepturi, error perspiciatis?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum maiores vel aliquid asperiores sint voluptatum libero? Provident ea laudantium dolorem impedit ut eius et dicta!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsa nobis hic, inventore rem distinctio aspernatur veniam. Incidunt fuga quibusdam minus vel aperiam magnam iusto odio ipsum. Et aliquid asperiores excepturi libero, iusto totam adipisci eius dolores autem eveniet inventore. Quod, a reiciendis placeat perspiciatis reprehenderit ab molestiae aliquam nam modi incidunt. Iure quibusdam, laborum rerum eius dolorem vel quas dolores corrupti beatae illo dicta labore, provident optio recusandae exercitationem quidem debitis aut. Aut aspernatur, recusandae laudantium cumque sunt quam, fugit possimus excepturi consectetur voluptas repellat deserunt quod ullam dolor amet a ad, officia magni nisi veritatis? Exercitationem, eveniet esse.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium praesentium dolor molestiae labore fugit, neque, suscipit dolores numquam, et doloribus distinctio asperiores quas harum? Eius qui quos repellat natus facere distinctio sequi consequatur aliquid reiciendis, quibusdam labore explicabo cupiditate ab laudantium ipsam. Non dignissimos atque qui, quam laborum ipsam dolorum suscipit nulla porro voluptatibus mollitia molestias nesciunt nemo voluptates rem nobis accusantium, sint consequuntur veniam blanditiis eaque? Molestias necessitatibus consectetur totam non quisquam! Rerum, alias.</p>
+    </div>
+
+            <!-- span tags are similar to text formatting except we use it paired up with sytle to change css properties of the selected text between the <span> tags. -->
+            <!-- div tags are similar to span tags, except they allow us to change css properties of the selected lines of a document using the style attribute-->
+<hr>
+
+
+</body>
+
+</html>
+
+                <!-- ELEMENTS: elements embody the opening tag and any content within the closing tag. Think of the <head> element that contains tags within such as the opening and closing <title> tag.-->
+                <!-- TAGS: Tags make up only a portion of an element. Think of the opening and closing <title> tags within the <head>.-->
+                <!-- HYPERLINKS: we can apply hyperlinks to text, images, any element of that nature. To do so we surround whatever it is we want to turn into a hyperlink with <a> tags -->
+                <!-- style=      we can use the style= attribute to customize our elements using css properties. when we use style and change many things within one element, they are on the same line but seperated by a semicolon. ex: style="background-color: black; position: left 10px;"-->
