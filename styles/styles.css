@@ -1,0 +1,43 @@
+nav {
+    background-color: darkblue;
+    padding: 10px;
+}
+/* This CSS rule names the <nav> element as the selected element to apply two style declarations.
+1. The background color will be the color "darkblue", which is a valid, named color.
+2. Padding, or area between the content and border is set to 10 pixels for readability. */
+
+nav a {
+    color: white;
+    display: block;
+    padding: 20px;
+}
+/* This CSS rule selects all the <a> (anchor / link) elements in the HTML that are children of the <nav> element and applies the following declarations:
+1. The foreground or font color will be white.
+2. The display will change from the default of inline to block.
+3. Each anchor tag will have padding of 20px; */
+
+h1 {
+    color: darkblue;
+}
+/* This CSS rule references the <h1> (heading 1) element as the selected element and applies the following declaration:
+1. The foreground, font color is set to darkblue. */
+
+img {
+    width: 150px;
+    height: auto;
+    border: 1px solid black;
+    padding: 2px;
+    box-shadow: 0 0 30px gray;
+}
+/* This CSS rule references all the <img> (image) elements as the selector and applies the following declarations:
+
+1. a set width with a height that will adjust dynamically to fit the image's aspect ratio.
+2. A border shortcut that names the width, type of border, and color of the border.
+3. Padding between the image and the border.
+4. A box shadow around the image border with zero offset and depth of 30px in gray. */
+
+p {
+    padding: 10px;
+}
+/* This CSS rule selects all the <p> (paragraph) elements as the selector and applies the following declaration:
+1. Padding between the paragraph content and the border is set to 10 pixels. */
