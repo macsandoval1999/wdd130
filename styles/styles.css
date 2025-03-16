@@ -1,43 +1,95 @@
+/* This CSS rule names the <nav> element as the selected element to apply two style declarations.
+1. The background color will be the color "darkblue", which is a valid, named color.
+2. Padding, or area between the content and border is set to 10 pixels for readability.
+*/
 nav {
     background-color: darkblue;
     padding: 10px;
 }
-/* This CSS rule names the <nav> element as the selected element to apply two style declarations.
-1. The background color will be the color "darkblue", which is a valid, named color.
-2. Padding, or area between the content and border is set to 10 pixels for readability. */
-
+/* This CSS rule selects all the <a> (anchor / link) elements in the HTML that are children of the <nav> element and applies the following declarations:
+1. The foreground or font color will be white.
+2. The display will change from the default of inline to block.
+3. Each anchor tag will have padding of 20px;
+*/
 nav a {
     color: white;
     display: block;
     padding: 20px;
 }
-/* This CSS rule selects all the <a> (anchor / link) elements in the HTML that are children of the <nav> element and applies the following declarations:
-1. The foreground or font color will be white.
-2. The display will change from the default of inline to block.
-3. Each anchor tag will have padding of 20px; */
 
+
+
+/* This CSS rule references all the <h1> (heading 1) element as the selected element and applies the following declaration:
+1. The foreground, font color is set to darkblue.
+*/
 h1 {
     color: darkblue;
 }
-/* This CSS rule references the <h1> (heading 1) element as the selected element and applies the following declaration:
-1. The foreground, font color is set to darkblue. */
 
-img {
+/* This CSS rule selects all the <p> (paragraph) elements as the selector and applies the following declaration:
+1. Padding between the paragraph content and the border is set to 0.
+*/
+p {
+    padding: 0;
+}
+
+
+
+/* This CSS rule selects the main element as the selector and applies the following declaration:
+1. The box width of this main element will not exceed past 840 pixels no matter the screen size, but it can be smaller
+*/
+main {
+    max-width: 840px;
+}
+/* This CSS rule selects the main elements images as the selector and applies the following declaration:
+1. The images width in this main element will be 150 pixels no matter the screen size
+2. The images height will automatically adjust to have the same aspect ratio as the original size
+3. The borders of these images will be 1px deep, be solid lines, and the color black
+4. The space between the image itself and the border will be 2px deep
+5. Box Shadows ignore margins and start at the border regardless if a margin is set. The shadow will be offset on the x radius by 0, and on the y radius by 0, and will have a blur radius of 30px deep, and be color gray
+*/
+main img {
     width: 150px;
     height: auto;
     border: 1px solid black;
     padding: 2px;
     box-shadow: 0 0 30px gray;
 }
-/* This CSS rule references all the <img> (image) elements as the selector and applies the following declarations:
 
-1. a set width with a height that will adjust dynamically to fit the image's aspect ratio.
-2. A border shortcut that names the width, type of border, and color of the border.
-3. Padding between the image and the border.
-4. A box shadow around the image border with zero offset and depth of 30px in gray. */
 
-p {
-    padding: 10px;
+
+/* This CSS rule selects the aside element selector and applies the following declaration:
+1.  Use REM: for global sizing, margins, padding, and other properties where you want consistent sizing based on the root font size.
+    USE EM: Use for local sizing, where you want an element's size to be relative to its parent's font size. 
+    Here we are saying the width of the aside box will be 20 times the root elements font size, which default is 16.
+2. The space between the border and another element is 1rem
+3. The space between the content and the border is 1rem
+4. The background color within the border will be darkblue
+5. The color of the text will be white
+6. The text is centered to the box
+*/
+aside {
+    width: 20rem;
+    margin: 1rem;
+    border: 1px solid black;
+    padding: 1rem;
+    background-color: darkblue;
+    color: white;
+    text-align: center;
 }
-/* This CSS rule selects all the <p> (paragraph) elements as the selector and applies the following declaration:
-1. Padding between the paragraph content and the border is set to 10 pixels. */
+/* This CSS rule selects all images within the aside element and applies the following declaration:
+1. The width of all images will be 200px
+2. The height of all images will be automatically adjusted to the width to keep the same aspect ratio as the original size */
+aside img {
+    width: 200px;
+    height: auto;
+}
+
+
+
+footer {
+    margin-top: 1rem;
+    border-top: 1px solid black;
+    text-align: center;
+}
+
