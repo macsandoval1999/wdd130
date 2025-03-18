@@ -1,65 +1,41 @@
-<!-- DOCTYPE - informs the browser about the document type and tells it to render the page according to the HTML5 standard -->
 <!DOCTYPE html> 
-<!-- HTML LANG - specifies the language of the element's content -->
 <html lang="en">
 
 
-<!-- HEAD - contains machine-readable information aka metadata about the documentation, like title, scripts, style sheets. Can only be one head. NOT A HEADER -->
 <head>
-    <!-- META CHARSET - an HTML tag that makes it possible to use emojis and other characters that aren't in the traditional ASCII character set on your webpage. If you don't use the tag, then you will need to look up HTML entities to manually insert an emoji or other character. -->
     <meta charset="UTF-8">
-    <!-- META NAME - The HTML <meta> name Attribute is used to specify the name for the metadata. This attribute is used to define the name for the information/value of the content attribute. -->
-    <!-- META NAME VIEWPORT - A viewport meta tag is HTML (HyperText Markup Language) code that tells browsers how to control viewport dimensions and scaling  It's a key ingredient of responsive web design and ensures your content is easy to view. A viewport is the user's visible area of a webpage. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- META NAME DESCRIPTION - A meta description tag generally informs and interests users with a short, relevant summary of what a particular page is about. They are like a pitch that convince the user that the page is exactly what they're looking for. -->
     <meta name="description" content="Marco Sandoval, WDD 130, Software Engineer, Software Developer, Computer Science, Web Design, Web Development ">
-    <!-- META NAME AUTHOR - Specifies the name of the author of the document. -->
     <meta name="author" content="Marco Sandoval"> 
-    <!-- TITLE - The title tag is an HTML code tag that allows you to give a web page a title. This title can be found in the browser title bar, as well as in the search engine results pages (SERP) -->
     <title>Marco Sandoval | WDD 130</title>
-    <!-- LINK REL - The rel attribute specifies the relationship between the current document and the linked document. Only used if the href attribute is present. LINK HREF - The href attribute specifies the URL of the page the link goes to. If the href attribute is not present, the <a> tag will not be a hyperlink. -->
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 
-<!-- BODY - The <body> tag defines the document's body. The <body> element contains all the contents of an HTML document, such as headings, paragraphs, images, hyperlinks, tables, lists, etc. Note: There can only be one <body> element in an HTML document. -->
 <body>
-    <!-- HEADER - In HTML, the <header> tag represents introductory or navigational content, often containing headings, logos, or navigation links -->
     <header>
-        <!-- NAV - The <nav> HTML element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes. -->
         <nav>
-            <!-- A - The <a> tag defines a hyperlink, which is used to link from one page to another. The most important attribute of the <a> element is the href attribute, which indicates the link's destination.  -->
             <a href="#">Home</a>
             <a href="wwr/">Rafting Site</a>
         </nav>
     </header>
 
 
-    <!-- MAIN - The HTML <main> tag is a structural element that represents the main content of a document. It's like the central hub of your webpage, encapsulating the primary content. By wrapping your main content within this tag, you're signaling to browsers and developers that this is the core information users are seeking. -->
     <main>
-        <!-- h1 - The H1 tag is an HTML heading tag usually used to mark the main title or highlight the primary subject of a webpage. It comprises an opening <h1> tag, the title text, and a closing </h1> tag. -->
         <h1>Marco Sandoval | WDD 130</h1>
-        <!-- IMG - The <img> tag is used to embed an image in an HTML page. Images are not technically inserted into a web page; images are linked to web pages. The <img> tag creates a
-        holding space for the referenced image. 
-        IMG SRC - Specifies the path to the image. Can be a url or a files path
-        IMG ALT - The ALT tag contains the alternative text for an image or a visual on a web page. It is one of the fields that can be filled out in your HTML code, and enables you to add a description of the picture or video if it is not properly displayed on screen.
-        IMG WIDTH - The width attribute specifies the width of an image, in pixels -->
+
         <img src="images/profile.webp" alt="Hello, my name is Marco Sandoval" width="200">
-        <!-- P - The <p> HTML element represents a paragraph. Paragraphs are usually represented in visual media as blocks of text separated from adjacent blocks by blank lines and/or first-line indentation, but HTML paragraphs can be any structural grouping of related content, such as images or form fields. -->
         <p>Hello! My name is Marco Sandoval and I am from Arizona, USA.  I like to draw realism, study scriptures, and spend time with my family. </p>
     </main>
 
 
-<!-- ASIDE - The HTML aside tag is a semantic element introduced to mark up content that is indirectly related to the main article content of a page. This could include glossaries, bibliographies, pull quotes, sidebars, or even advertisements. -->
     <aside>
-        <!-- h2 - An H2 tag marks the first sub-heading after your document's main heading. It defines the second-level headings on your webpage. Like an H1 tag, an H2 tag also appears larger than the rest of your main body text. -->
         <h2>Arizona</h2>
         <img src ="images/arizona.webp" alt="Arizona Desert">
         <p>Arizona is a wonderful place, expecially the mid northern areas. From within Maricopa County, you can see mountains surrounding the outskirts of the civilised parts of the desert. The mid-northern area contains a variety of beautiful green forestry which is a great difference compared to the dry desert just south of it. It is incredibly hot ten months our of the year, and the winters here can sometimes only be noticed between sunrise and sunset.</p>
     </aside>
 
 
-    <!-- FOOTER - The <footer> element is a structural element used to identify the footer of a page, document, article, or section. A <footer> typically contains copyright and authorship information or navigational elements pertaining to the contents of the parent element. -->
     <footer>
         <p>©️2025 | Marco Sandoval | Arizona, USA</p>
     </footer>
