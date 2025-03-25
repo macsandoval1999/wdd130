@@ -80,10 +80,11 @@ main img {
     USE EM: Use for local sizing, where you want an element's size to be relative to its parent's font size. 
     Here we are saying the width of the aside box will be 20 times the root elements font size, which default is 16.
 2. The space between the border and another element is 1rem
-3. The space between the content and the border is 1rem
-4. The background color within the border will be the color that is stored in the variable named "secondary-color".
-5. The foreground or font color will be the color that is stored in variable "font-color-for-dark-bakgrounds"
-6. The text is centered to the box
+3. The border is 1px thick, and is a black solid line
+4. The space between the content and the border is 1rem
+5. The background color within the border will be the color that is stored in the variable named "secondary-color".
+6. The foreground or font color will be the color that is stored in variable "font-color-for-dark-bakgrounds"
+7. The text is centered to the box
 */
 aside {
     width: 20rem;
@@ -104,6 +105,11 @@ aside img {
 
 
 
+/* This CSS rule selects the footer element selector and applies the following declaration:
+1. The space between the top border and another element is 1rem
+2. The top border is 1px thick, and is a black solid line
+3. The text is centered to the box
+*/
 footer {
     margin-top: 1rem;
     border-top: 1px solid black;
