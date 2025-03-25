@@ -1,18 +1,35 @@
+/* The :root pseudo-class is used to select the root element (html) of the document. It is common to see the :root rule at the top of the CSS document, especially since global CSS variables will be declared within that rule.
+Global CSS variables are declared within the :root selector.
+Global CSS variables are declared using the -- prefix followed by the variable name, of your choice and be sure to follow acceptable naming conventions.
+Global CSS variables are used by calling the variable name with the var() function as you will see througout this stylesheet.
+--double dashed variables are placeholders for repeated declarations, and can be named whatever you want. */
+/* This CSS rule names the <html> element as the selected element and creates global CSS variables that can be called throughout this stylesheet
+1. This global css variable was named "primary-color" and has a color stored in it
+2. This global css variable was named "secondary-color" and has a color stored in it
+3. This global css variable was named "font-color-for-dark-backgrounds" and has a color stored in it*/
+:root {
+    --primary-color: rgb(55, 55, 68);
+    --secondary-color: rgb(0, 0, 91);
+    --font-color-for-dark-backgrounds: white;
+}
+
+
+
 /* This CSS rule names the <nav> element as the selected element to apply two style declarations.
-1. The background color will be the color "darkblue", which is a valid, named color.
+1. The background color will be the color that is stored in the variable named "primary-color".
 2. Padding, or area between the content and border is set to 10 pixels for readability.
 */
 nav {
-    background-color: darkblue;
+    background-color: var(--primary-color);
     padding: 10px;
 }
 /* This CSS rule selects all the <a> (anchor / link) elements in the HTML that are children of the <nav> element and applies the following declarations:
-1. The foreground or font color will be white.
+1. The foreground or font color will be the color that is stored in variable "font-color-for-dark-bakgrounds".
 2. The display will change from the default of inline to block.
 3. Each anchor tag will have padding of 20px;
 */
 nav a {
-    color: white;
+    color: var(--font-color-for-dark-backgrounds);
     display: block;
     padding: 20px;
 }
@@ -23,7 +40,7 @@ nav a {
 1. The foreground, font color is set to darkblue.
 */
 h1 {
-    color: darkblue;
+    color: blue;
 }
 
 /* This CSS rule selects all the <p> (paragraph) elements as the selector and applies the following declaration:
@@ -64,8 +81,8 @@ main img {
     Here we are saying the width of the aside box will be 20 times the root elements font size, which default is 16.
 2. The space between the border and another element is 1rem
 3. The space between the content and the border is 1rem
-4. The background color within the border will be darkblue
-5. The color of the text will be white
+4. The background color within the border will be the color that is stored in the variable named "secondary-color".
+5. The foreground or font color will be the color that is stored in variable "font-color-for-dark-bakgrounds"
 6. The text is centered to the box
 */
 aside {
@@ -73,8 +90,8 @@ aside {
     margin: 1rem;
     border: 1px solid black;
     padding: 1rem;
-    background-color: darkblue;
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--font-color-for-dark-backgrounds);
     text-align: center;
 }
 /* This CSS rule selects all images within the aside element and applies the following declaration:
