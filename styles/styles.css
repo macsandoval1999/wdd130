@@ -1,3 +1,4 @@
+/* -----ROOT GLOBAL VARIABLES----- */
 /* The :root pseudo-class is used to select the root element (html) of the document. It is common to see the :root rule at the top of the CSS document, especially since global CSS variables will be declared within that rule.
 Global CSS variables are declared within the :root selector.
 Global CSS variables are declared using the -- prefix followed by the variable name, of your choice and be sure to follow acceptable naming conventions.
@@ -8,21 +9,38 @@ Global CSS variables are used by calling the variable name with the var() functi
 2. This global css variable was named "secondary-color" and has a color stored in it
 3. This global css variable was named "font-color-for-dark-backgrounds" and has a color stored in it*/
 :root {
-    --primary-color: rgb(55, 55, 68);
+    --primary-color: rgb(165, 165, 165);
     --secondary-color: rgb(0, 0, 91);
     --font-color-for-dark-backgrounds: white;
 }
 
 
 
+/* -----UNIVERSAL DEFAULTS----- */
+/* The CSS universal selector ( * ) selects all elements of any type. The universal selector ( * ) can also select all elements inside another element when chained such as p*. This selector can also be namespaced when using @namespace. This is like a starting point for more control.
+This CSS rule names all elements as the selected element and applies the following declarations:
+1. All elements have a default of no margin
+2. All elements have a default of no padding
+3. All elements have a border sizing property of border box, meaning their border and padding are accounted for in their size if we set a width to an element*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* ----- NAVIGATION CONTAINER----- */
 /* This CSS rule names the <nav> element as the selected element to apply two style declarations.
 1. The background color will be the color that is stored in the variable named "primary-color".
 2. Padding, or area between the content and border is set to 10 pixels for readability.
 */
 nav {
-    background-color: var(--primary-color);
+    background-color: black;
     padding: 10px;
+    display: block;
 }
+
 /* This CSS rule selects all the <a> (anchor / link) elements in the HTML that are children of the <nav> element and applies the following declarations:
 1. The foreground or font color will be the color that is stored in variable "font-color-for-dark-bakgrounds".
 2. The display will change from the default of inline to block.
@@ -35,23 +53,29 @@ nav a {
 }
 
 
-
+/* -----DEFAULT FOR HEADERS----- */
 /* This CSS rule references all the <h1> (heading 1) element as the selected element and applies the following declaration:
 1. The foreground, font color is set to darkblue.
+2. Will have a padding of 0.5rem
 */
 h1 {
     color: blue;
+    padding: 0.5rem
 }
 
+
+
+/* -----DEFAULT FOR PARAGRAPH----- */
 /* This CSS rule selects all the <p> (paragraph) elements as the selector and applies the following declaration:
-1. Padding between the paragraph content and the border is set to 0.
+1. Margin between the paragraph border and other elements is set to 1rem.
 */
 p {
-    padding: 0;
+    margin: 1rem;
 }
 
 
 
+/* -----MAIN CONTAINER----- */
 /* This CSS rule selects the main element as the selector and applies the following declaration:
 1. The box width of this main element will not exceed past 840 pixels no matter the screen size, but it can be smaller
 */
@@ -64,36 +88,33 @@ main {
 3. The borders of these images will be 1px deep, be solid lines, and the color black
 4. The space between the image itself and the border will be 2px deep
 5. Box Shadows ignore margins and start at the border regardless if a margin is set. The shadow will be offset on the x radius by 0, and on the y radius by 0, and will have a blur radius of 30px deep, and be color gray
+6. The images in the main element will float to the right, where everything else in the main container will wrap around it
+7. The images in the main element will have no margin on the top or bottom, and a margin 1 times the root elements font size on the left and right
 */
 main img {
     width: 150px;
     height: auto;
-    border: 1px solid black;
+    border: 1px solid darkgray;
     padding: 2px;
     box-shadow: 0 0 30px gray;
+    float: right;
+    margin: 0 0 1rem 1rem;
 }
 
 
 
+/* -----ASIDE CONTAINER----- */
 /* This CSS rule selects the aside element selector and applies the following declaration:
 1.  Use REM: for global sizing, margins, padding, and other properties where you want consistent sizing based on the root font size.
     USE EM: Use for local sizing, where you want an element's size to be relative to its parent's font size. 
     Here we are saying the width of the aside box will be 20 times the root elements font size, which default is 16.
-2. The space between the border and another element is 1rem
-3. The border is 1px thick, and is a black solid line
-4. The space between the content and the border is 1rem
-5. The background color within the border will be the color that is stored in the variable named "secondary-color".
-6. The foreground or font color will be the color that is stored in variable "font-color-for-dark-bakgrounds"
-7. The text is centered to the box
+2. The text is centered to the box
+3. The aside container will be positioned relative, meaning if any of its children elements are positioned absolute, they will be able to overlap and move anywhere inside the container
 */
 aside {
     width: 20rem;
-    margin: 1rem;
-    border: 1px solid black;
-    padding: 1rem;
-    background-color: var(--secondary-color);
-    color: var(--font-color-for-dark-backgrounds);
     text-align: center;
+    position: relative;
 }
 /* This CSS rule selects all images within the aside element and applies the following declaration:
 1. The width of all images will be 200px
@@ -102,9 +123,18 @@ aside img {
     width: 200px;
     height: auto;
 }
+/* This CSS rule selects the h2 elements within the aside element and applies the following declaration:
+1. The position of these h2 elements will be absolute compared to the aside container. For this to work, the container must be relative. This will cause the element that is absolute to overlap the container element and move freely inside the container. It is also taken out of flow so everything else in the container gets bumped up in the flow.
+2. The position of these h2 elements will be 75px
+ */
+aside h2 {
+    position: absolute;
+    right: 75px;
+}
 
 
 
+/* FOOTER CONTAINER */
 /* This CSS rule selects the footer element selector and applies the following declaration:
 1. The space between the top border and another element is 1rem
 2. The top border is 1px thick, and is a black solid line
@@ -116,3 +146,31 @@ footer {
     text-align: center;
 }
 
+
+
+/* -----CLASS SELECTORS----- */
+
+
+/* -----CLASS: BOX----- */
+/* This CSS rule selects all elements with the class of "box" and applies the following declaration:
+1. The margin of this box will be 1 times the root elements font size, which default is 16.
+2. The border is 1px thick, and is a black solid line
+3. The space between the content and the border is 1rem
+4. The background color within the border will be the color that is stored in the variable named "primary-color".
+5. The foreground or font color will be the color that is stored in variable "font-color-for-dark-backgrounds" 
+*/
+.box {
+    margin: 1rem;
+    border: 1px solid black;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--font-color-for-dark-backgrounds);
+}
+
+/* -----CLASS: INDENT----- */
+/* This CSS rule selects all elements with the class of "indent" and applies the following declaration:
+1. The padding on the left will be 2 times the root elements font size, which is 16
+*/
+.indent {
+    padding-left: 2rem;
+}
