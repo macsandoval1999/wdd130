@@ -33,23 +33,34 @@ This CSS rule names all elements as the selected element and applies the followi
 /* ----- NAVIGATION CONTAINER----- */
 /* This CSS rule names the <nav> element as the selected element to apply two style declarations.
 1. The background color will be the color that is stored in the variable named "primary-color".
-2. Padding, or area between the content and border is set to 10 pixels for readability.
+2. Padding, or area between the content and border is 1 times the root elements default font size.
+3. This container is now a flex container and contains flex items. This element enables the flexbox layout mode, allowing you to easily arrange and align elements within a container, even when their sizes are dynamic or unknown,
+4. The flex items in this flex container will be spaced evenly along the horizontal axis.
+5. The flex items in this flex container will be centered to it, the flex container
 */
 nav {
     background-color: black;
-    padding: 10px;
-    display: block;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 /* This CSS rule selects all the <a> (anchor / link) elements in the HTML that are children of the <nav> element and applies the following declarations:
-1. The foreground or font color will be the color that is stored in variable "font-color-for-dark-bakgrounds".
+1. The foreground or font color of the anchor elements inside the nav container will be the color that is stored in variable "font-color-for-dark-bakgrounds".
 2. The display will change from the default of inline to block.
-3. Each anchor tag will have padding of 20px;
+3. Each anchor tag will have padding thats 0.5 times the root elements default font size which is 16px;
+4. The anchor elements in the nav container will have no text decoration, removing the default lines on the links. text decoration is used to add and remove decorative effects to the text. 
+5. The font size of the anchor tags in the nav container will have a font size of 1.2 times the root element
+6. The font weight will be 700 making the tex appear more thick
 */
 nav a {
     color: var(--font-color-for-dark-backgrounds);
     display: block;
-    padding: 20px;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 
@@ -60,7 +71,8 @@ nav a {
 */
 h1 {
     color: blue;
-    padding: 0.5rem
+    padding: 0.5rem;
+    border-bottom: 1px solid black;
 }
 
 
@@ -77,10 +89,12 @@ p {
 
 /* -----MAIN CONTAINER----- */
 /* This CSS rule selects the main element as the selector and applies the following declaration:
-1. The box width of this main element will not exceed past 840 pixels no matter the screen size, but it can be smaller
+1. Because "main" is a grid item in the .grid classed <div> container, main is a grid item. This means everything in the main container are grid grandchildren. If the main moves around the grid, this means that everything in the main container will move around as one grid item. grid-column-align defines the horizontal alignment within the column. Specifies a grids porition within the grid columns. Here the start position column-wise is column line 2, and the end position is column line 3.
+2. The margin of this grid item is 1 times the root elements default font size
 */
 main {
-    max-width: 840px;
+    grid-column: 2/3;
+    margin: 1rem;
 }
 /* This CSS rule selects the main elements images as the selector and applies the following declaration:
 1. The images width in this main element will be 150 pixels no matter the screen size
@@ -109,12 +123,16 @@ main img {
     USE EM: Use for local sizing, where you want an element's size to be relative to its parent's font size. 
     Here we are saying the width of the aside box will be 20 times the root elements font size, which default is 16.
 2. The text is centered to the box
-3. The aside container will be positioned relative, meaning if any of its children elements are positioned absolute, they will be able to overlap and move anywhere inside the container
+3. The aside container will be positioned relative, meaning if any of its children elements are positioned absolute, they will be able to overlap and move anywhere inside the container.
+4. Because "aside" is a grid item in the .grid classed <div> container, this means everything in the aside container are grid grandchildren. If the aside moves around the grid, this means that everything in the aside container will move around as one grid item. The grid-row-align property defines the vertical alignment within the row while grid-column-align defines the horizontal alignment within the column. Specifies a grids porition within the grid columns. Here the start position column-wise is column line 1, and the end position is column line 2.
+5. The start position row-wise is row line 1, and the end is row line 2
 */
 aside {
     width: 20rem;
     text-align: center;
     position: relative;
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
 /* This CSS rule selects all images within the aside element and applies the following declaration:
 1. The width of all images will be 200px
@@ -148,6 +166,16 @@ footer {
 
 
 
+/* HEADER CONTAINER, FOOTER CONTAINER, AND ALL CONTAINERS CONTAINERS CLASSED AS "GRID" */
+/* This CSS rule selects the header and footer element selectors and applies the following declarations:
+1. The largest width these containers can possibly have is 840px.
+2. The top and bottom margins of these containers is 0 so no margin is applied, and  these containers will be centered horizontally to their parent container which in this case is the html element or webpage
+*/
+header, footer, .grid {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
 /* -----CLASS SELECTORS----- */
 
 
@@ -173,4 +201,14 @@ footer {
 */
 .indent {
     padding-left: 2rem;
+}
+
+/* -----CLASS: GRID----- */
+/* This CSS rule selects all elements with the class of "grid" and applies the following declarations:
+1. Declaring display: grid gives you a one column grid, so your items will continue to display one below the other as they do in normal flow. To see something that looks more grid-like, we'll need to add some columns to the grid.
+2. Aligns grid items along the block (column) axis (as opposed to justify-items which aligns along the inline (row) axis).
+*/
+.grid {
+    display: grid;
+    align-items: center;
 }
