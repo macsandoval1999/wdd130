@@ -211,6 +211,7 @@ footer {
 footer p {
     grid-column: 2/5;
     text-align: center;
+    color: white;
 }
 .sociallinks {
     display: flex;
