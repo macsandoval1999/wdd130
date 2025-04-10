@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Christian HTML Elements Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="eli.css">
+  <style>
+    section, article, aside, nav, header, footer, main, figure {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Exploring HTML Through a Christian Lens</h1>
+    <nav>
+      <ul>
+        <li><a href="#scripture">Scripture & Text</a></li>
+        <li><a href="#prayer">Prayer Form</a></li>
+        <li><a href="#media">Worship & Media</a></li>
+        <li><a href="#faith">Faith Elements</a></li>
+        <li><a href="#discipleship">Bible Table</a></li>
+        <li><a href="#creativity">Creative Tools</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- SCRIPTURE TEXT -->
+    <section id="scripture">
+      <h2>Scripture & Text Elements</h2>
+      <p>"<strong>The Lord is my shepherd</strong>, I lack nothing." <em>— Psalm 23:1</em></p>
+      <p><mark>"For God so loved the world..."</mark> is found in <abbr title="Gospel of John">John</abbr> 3:16.</p>
+      <blockquote cite="https://www.biblegateway.com/passage/?search=Romans+8%3A28">
+        "And we know that in all things God works for the good of those who love him." — Romans 8:28
+      </blockquote>
+      <pre>
+let faith = "strong";
+if (trustInGod) {
+  walkByFaith(faith);
+}
+      </pre>
+      <kbd>Ctrl</kbd> + <kbd>P</kbd> to open your Bible app.
+      <hr>
+      <address>Ministry Contact: <a href="mailto:pastor@church.org">pastor@church.org</a></address>
+    </section>
+
+    <!-- PRAYER FORM -->
+    <section id="prayer">
+      <h2>Prayer Request Form</h2>
+      <form>
+        <label for="name">Name: <input type="text" id="name" name="name"></label><br>
+        <label for="email">Email: <input type="email" id="email" name="email"></label><br>
+        <label for="prayer">Your Prayer:</label><br>
+        <textarea id="prayer" name="prayer" rows="4" cols="40">Lord, I ask for...</textarea><br>
+        <input type="submit" value="Send Prayer">
+        <button type="button" onclick="alert('Praying with you!')">Pray Together</button>
+      </form>
+    </section>
+
+    <!-- WORSHIP MEDIA -->
+    <section id="media">
+      <h2>Worship Media</h2>
+      <p>Listen to uplifting worship:</p>
+      <audio controls>
+        <source src="worship.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+      </audio>
+      <p>Watch a sermon:</p>
+      <video controls width="250">
+        <source src="sermon.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+      <figure>
+        <img src="https://via.placeholder.com/100" alt="Cross and Bible">
+        <figcaption>He is Risen!</figcaption>
+      </figure>
+    </section>
+
+    <!-- FAITHFUL SEMANTICS -->
+    <section id="faith">
+      <h2>Faith-Focused Elements</h2>
+
+      <article>
+        <h3>Devotional Thought</h3>
+        <p>“Let your light shine before others...” — Matthew 5:16</p>
+      </article>
+
+      <aside>
+        <p><strong>Side Note:</strong> A good resource is <a href="https://bibleproject.com">BibleProject.com</a>.</p>
+      </aside>
+
+      <details>
+        <summary>Daily Encouragement</summary>
+        <p>“Be still, and know that I am God.” — Psalm 46:10</p>
+      </details>
+
+      <dialog open>
+        Welcome to the daily verse of the day!
+      </dialog>
+
+      <time datetime="2025-04-10">April 10, 2025</time>
+      <progress value="80" max="100">80%</progress> Journey through the Bible
+      <meter value="0.7">70%</meter> Spiritual growth
+      <output>God is faithful!</output>
+    </section>
+
+    <!-- BIBLE TABLE -->
+    <section id="discipleship">
+      <h2>Bible Study Table</h2>
+      <table border="1">
+        <caption>Books of the Bible</caption>
+        <thead>
+          <tr><th>Old Testament</th><th>New Testament</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Genesis</td><td>Matthew</td></tr>
+          <tr><td>Exodus</td><td>Mark</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td colspan="2">God's Word is alive!</td></tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <!-- CREATIVE EXPRESSION -->
+    <section id="creativity">
+      <h2>Creative Tools for Faith</h2>
+
+      <script>
+        console.log('Jesus is Lord!');
+      </script>
+
+      <noscript>Please enable JavaScript to experience interactive devotionals.</noscript>
+
+      <canvas width="100" height="100" style="border:1px solid #000;">
+        <!-- Could draw a cross or dove here with JavaScript -->
+      </canvas>
+
+      <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="goldenrod" stroke-width="3" fill="lightblue" />
+        <!-- A sun to represent the Light of the World -->
+      </svg>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 All for His glory. Made with love and code.</p>
+  </footer>
+
+</body>
+</html>
