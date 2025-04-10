@@ -16,7 +16,6 @@ color: navy;
 text-align: center;
 }
 
-
 body {
 font-family: Merriweather, Georgia, serif;
 font-size: 1.2em;
@@ -47,8 +46,6 @@ margin: 0.5rem 0;
 .column2 {
 grid-template-columns: 1fr 2fr;
 }
-
-
 
 fieldset {
 display: grid;
@@ -98,7 +95,6 @@ button:hover {
 background-color: darkgreen;
 }
 
-
 footer {
 margin: 1rem auto 0;
 width: 650px;
@@ -107,3 +103,4 @@ font-size: 0.8em;
 color: #777;
 border-top: 1px solid #ccc;
 }
+
